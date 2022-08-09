@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="mx">
+<head>
+	<meta charset="UTF-8">
+	<title>Facturación</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="description" content="Facturación">
+	<meta name="keywords" content="responsive, retina ready, html5, css3, restaurant, food, bar, events, facturation" />
+	<meta name="author" content="parapenteagencia.com">
+
+	<!-- favicon -->
+	<link rel="icon" href="images/favicon.png">
+
+	<!-- bootstrap css -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- css -->
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/animate.css" rel="stylesheet">
+	<link href="css/magnific-popup.css" rel="stylesheet">
+	<link href="css/bootstrap-datetimepicker.css" rel="stylesheet">
+	<!-- fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Cabin:400,700" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href='fonts/FontAwesome.otf' rel='stylesheet' type='text/css'>
+</head>
+<body class="facturacion">
+	<header>
+		<nav class="navbar navbar-default">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-2 col-md-3">
+						<a class="navbar-brand" href="http://lafloresta.mx/"><img src="images/logo-inline.png" alt="logo" class="inline-logo"> <img src="images/logo-collapsed.png" alt="logo" class="collapsed-logo"></a>
+					</div>
+					<div class="col-xs-12 col-sm-10 col-md-9">
+						<h1 class="letra">Facturación Electrónica</h1>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<!-- Container -->
+	<div class="container fondo">
+	<!-- Formulario de búsqueda de Tickets -->
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12">
+				<p>
+					<h3>Formulario de búsqueda de Tickets</h3>
+					Este formulario le permite obtener el Comprobante Fiscal Digital correspondiente a <strong>La Floresta</strong>
+					<br>
+					<br>
+					La información requerida deberá ser completada correctamente con el fin de permitir el acceso al servicio. Los campos marcados con asterisco * son obligatorios.
+					<br>
+					<br>
+					Para quejas o sugerencias, contáctenos <strong>facturacionfloresta@gmail.com</strong>.	
+
+				</p>
+			</div>
+		</div>
+	<!-- /Formulario de búsqueda de Tickets -->
+	<!-- Consideraciones importantes -->
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12">
+				<p>
+					<h3>Consideraciones importantes</h3>
+					<li>Para obtener el comprobante físcal digital tiene como fecha limite el último día natural del mes en curso.</li>
+					<li>La fecha del comprobante generado corresponderá a la fecha de la solicitud del mismo y no a la fecha de emisión del ticket.</li>
+					<li>Los datos necesarios se encuentran en el ticket de caja.</li>
+				</p>
+			</div>
+		</div>
+	<!-- /Consideraciones importantes -->
+	<!-- Formulario -->
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12">
+				<p>
+				<h3>Datos para obtener su factura</h3>
+				<form data-toggle="validator" name='formulario' method='post' action='php/form.php' enctype="multipart/form-data">
+				<div class="form-group">
+					<label for="nombre">RFC: *</label>
+					<input type="text" class="form-control" id="RFC" name="RFC" placeholder="Ingrese el RFC (ej: 'VECJ880326 XXX')" required> 
+				</div>
+				<div class="form-group">
+					<label for="razon social">Razón Social: *</label>
+					<select class="form-control" id="Razon-Social" name="Razon-Social" placeholder="Eliga una opción" required>
+						<option value="Moral">Persona Moral</option>
+						<option value="Fisica">Persona Física</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="nombre razon social">Nombre de Razón Social: *</label>
+					<input type="text" class="form-control" id="Nombre-de-Razon-Social" name="Nombre-de-Razon-Social" placeholder="Ingrese su nombre de Razón Social (ej: 'Hermanos Gómez y Ripoldi S.R.L. ó Pedro Domínguez')" required>
+				</div>
+				<div class="form-group">
+					<label for="direccion">Dirección de Facturación: *</label>
+					<input type="text" class="form-control" id="Direccion" name="Direccion" placeholder="Ingrese su Dirección de Facturación (ej: 'Av. Durango No. 264 Int. 1 Col. Primer Cuadro 81200 Los Mochis, Ahome, Sin.')" required>
+				</div>
+				<div class="form-group">
+					<label for="codigo postal">Código Postal: *</label>
+					<input type="number" class="form-control" id="Codigo-Postal" name="Codigo-Postal" placeholder="Ingrese su Código Postal (ej: '77712')" required>
+				</div>
+				<div class="form-group">
+					<label for="numero de orden">Número de Orden: *</label>
+					<input type="number" class="form-control" id="Numero-de-Orden" name="Numero-de-Orden" placeholder="Ingrese su número de orden (ej: '0057')" required>
+				</div>
+				<div class="form-group">
+					<label for="total">Total: *</label>
+					<input type="text" class="form-control" id="Total" name="Total" placeholder="Ingrese el monto (ej: '$ 108.50')" required>
+				</div>
+				<div class="form-group">
+					<label for="email">E-mail: *</label>
+					<input type="email" class="form-control" id="E-mail" name="E-mail" placeholder="tu@correo.com" required>
+				</div>
+				<div class="form-group">
+					<label for="archivo">Archivo (si desea puede anexar una foto del ticket)</label>
+					<input type="file" id="archvio1" name="archvio1">
+					<p class="help-block">Máximo 5MB</p>
+				</div>
+				<button type="submit" id="form-submit" class="btn btn-md btn-primary-filled btn-form-submit">Envíar</button>
+                        <div id="msgSubmit" class="h3 text-center hidden"></div>
+                        <div class="clearfix"></div>
+				</form>
+				</p>
+			</div>
+		</div>
+	<!-- Formulario -->	
+	</div>
+<!-- /Container -->
+
+<!-- footer -->
+<footer>
+    <div class="container">
+        <p class="footer-info">© 2018 - <strong><a href="http://parapenteagencia.com/" target="blank">Parapente Agencia Digital</a></strong> - La Floresta.
+            <span class="social pull-right">
+                <a href="https://www.facebook.com/LaFlorestaPlaya/"><i class="fa fa-facebook"></i></a>
+            </span>
+        </p>
+    </div><!-- / container -->
+</footer>
+<!-- / footer -->
+
+<!-- javascript -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- / javascript -->
+
+<!-- contact-form -->
+<script src="js/validator.min.js" type="text/javascript"></script>
+<!-- / contact-form -->
+
+</body>
+</html>
